@@ -64,27 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Form submission
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const formValues = Object.fromEntries(formData.entries());
-            
-            // Here you would typically send the form data to a server
-            console.log('Form submitted:', formValues);
-            
-            // Show success message
-            alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
-            
-            // Reset form
-            contactForm.reset();
-        });
-    }
-    
     // Open first collapsible by default
     if (collapsibles.length > 0) {
         collapsibles[0].click();
